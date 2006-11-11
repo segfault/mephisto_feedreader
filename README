@@ -10,6 +10,11 @@ Install
    copy the migration file located in db/migrate into the main mephisto
    db/migrate dir. run rake db:migrate 
 
+   this plugin requires a fixed/patched version of feedtools, so
+   freeze the feedtools gem using: rake rails:freeze:gem GEM=feedtools
+   once it's frozen, copy feedtools_patch/parse.rb to
+    vendor/feedtools-VERSIONHERE/vendor/htree
+
 
 Usage
 ==========
