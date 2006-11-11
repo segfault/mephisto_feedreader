@@ -7,6 +7,8 @@ You can display feeds in your templates
 Install
 ==========
    ruby script/install svn://hasno.info/mephisto/plugins/feedreader
+   copy the migration file located in db/migrate into the main mephisto
+   db/migrate dir. run rake db:migrate 
 
 
 Usage
