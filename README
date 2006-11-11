@@ -1,0 +1,24 @@
+rss feed display plugin for Mephisto
+==================================================
+
+You can display feeds in your templates
+
+
+Install
+==========
+   ruby script/install svn://hasno.info/mephisto/plugins/feedreader
+
+
+Usage
+==========
+
+The plugin makes a new liquid template tag 'feedreader':
+
+   <ul>
+   {% feedreader url: 'http://digg.com/', max: 15 as link %}
+     <li><a href="{{ link.href }}">{{ link.description }}</a> {{ link.extended }}</li>
+   {% feedreader %}
+   </ul>
+
+
+(C) Mark Guzman 2006, under an MIT license.
