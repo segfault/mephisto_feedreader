@@ -24,7 +24,7 @@ The plugin makes a new liquid template tag 'feedreader':
    <ul>
    {% feedreader url: 'http://digg.com/', max: 15 as link %}
      <li><a href="{{ link.href }}">{{ link.description }}</a> {{ link.extended }}</li>
-   {% feedreader %}
+   {% endfeedreader %}
    </ul>
 
 
