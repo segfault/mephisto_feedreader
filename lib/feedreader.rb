@@ -17,7 +17,7 @@ module MephistoFeedReader
   class FeedReader < Liquid::Block
     Syntax = /((#{Liquid::TagAttributes}\s?,?\s?)*)as\s(#{Liquid::VariableSignature}+)/
 
-    def initialize(markup, tokens)
+    def initialize(tag_name, markup, tokens)
       super
       if markup =~ Syntax
         @options = parse_options( $1 )
