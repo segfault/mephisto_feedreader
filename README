@@ -7,13 +7,8 @@ You can display feeds in your templates
 Install
 ==========
    ruby script/install svn://hasno.info/mephisto/plugins/feedreader
-   copy the migration file located in db/migrate into the main mephisto
-   db/migrate dir. run rake db:migrate 
+   ruby script/runner -e production 'MephistoPlugins::FeedReader.install'
 
-   this plugin requires a fixed/patched version of feedtools, so
-   freeze the feedtools gem using: rake rails:freeze:gem GEM=feedtools
-   once it's frozen, copy feedtools_patch/parse.rb to
-    vendor/feedtools-VERSIONHERE/vendor/htree
 
 
 Usage
@@ -28,4 +23,4 @@ The plugin makes a new liquid template tag 'feedreader':
    </ul>
 
 
-(C) Mark Guzman 2006, under an MIT license.
+(C) Mark Guzman 2006-2007, under an MIT license.

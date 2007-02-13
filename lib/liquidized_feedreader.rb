@@ -1,11 +1,14 @@
+# $Id$
+# liquid-ify the feedtools feeditems
 class FeedTools::FeedItem
   def to_liquid
     {
       'href' => link,
-      'description' => abstract,
-      'extended' => description,
+      'description' => title,
+      'extended' => content,
       'tags' => tags,
-      'time' => Time.parse(time)
+      'time' => time
     }
   end
 end
+

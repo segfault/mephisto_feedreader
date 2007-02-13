@@ -1,2 +1,4 @@
 require 'feedreader'
-Liquid::Template.register_tag('feedreader', MephistoFeedReader::FeedReader)
+require 'liquidized_feedreader'
+require 'feedreader/plugin'
+Liquid::Template.register_tag('feedreader', FeedReader)
