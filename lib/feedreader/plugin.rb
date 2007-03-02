@@ -1,8 +1,8 @@
 # $Id$
-module MephistoPlugins
-  class Feedreader < MephistoPlugin
+module Mephisto::Plugins
+  class Feedreader < Mephisto::Plugin
     author 'Mark Guzman'
-    version '$Rev$'.gsub( "Rev: ", "" )
+    version 'r$Rev$'.gsub( /(\$Rev:\s+)|(\s+\$)/, "" )
     notes "Add liquid blocks displaying RSS feeds"
     homepage "http://hasno.info/2006/11/11/mephisto-plugins"
     
