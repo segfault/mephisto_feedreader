@@ -7,7 +7,7 @@ You can display feeds in your templates
 Install
 ==========
    ruby script/install svn://hasno.info/mephisto/plugins/feedreader
-   ruby script/runner -e production 'Mephisto::Plugins::FeedReader.install'
+   ruby script/runner -e production 'Mephisto::Plugins::Feedreader.install'
 
 
 

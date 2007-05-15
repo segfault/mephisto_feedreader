@@ -18,6 +18,7 @@ class FeedReader < Liquid::Block
 
   def render(context)
     result = []
+    FeedTools.configurations[:feed_cache] = FeedTools::DatabaseFeedCache
     ft_feed = FeedTools::Feed.open(@options[:url])
     ft_entries = ft_feed.entries
     max = @options[:max]
