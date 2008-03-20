@@ -1,8 +1,8 @@
-# $Id$
+# $Id: plugin.rb 89 2007-03-02 23:49:05Z segfault $
 module Mephisto::Plugins
   class Feedreader < Mephisto::Plugin
     author 'Mark Guzman'
-    version 'r$Rev$'.gsub( /(\$Rev:\s+)|(\s+\$)/, "" )
+    version 'r$Rev: 89 $'.gsub( /(\$Rev:\s+)|(\s+\$)/, "" )
     notes "Add liquid blocks displaying RSS feeds"
     homepage "http://hasno.info/2006/11/11/mephisto-plugins"
     

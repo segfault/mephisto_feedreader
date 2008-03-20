@@ -1,6 +1,6 @@
 # $Id$
 # liquid-ify the feedtools feeditems
-class FeedTools::FeedItem
+class FeedEater::FeedItem
   def to_liquid
     {
       'href' => link,

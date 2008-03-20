@@ -1,6 +1,7 @@
 # $Id$
 # Mephisto FeedReader plugin 
-require 'feed_tools'
+require 'feedeater'
+require 'feed_cache'
 require 'liquid'
 
 class FeedReader < Liquid::Block
@@ -18,8 +19,11 @@ class FeedReader < Liquid::Block
 
   def render(context)
     result = []
-    FeedTools.configurations[:feed_cache] = FeedTools::DatabaseFeedCache
-    ft_feed = FeedTools::Feed.open(@options[:url])
+    FeedEater::Feed.feed_cache = FeedEater::FeedCache
+    ft_feed = FeedEater::Feed.open(@options[:url])
+    puts "live: #{ft_feed.live?}"
+    puts "last retrieved: #{ ft_feed.last_retrieved }"
+    #puts "expires: #{ ft_feed.last_retrieved + ft_feed.time_to_live }"
     ft_entries = ft_feed.entries
     max = @options[:max]
     max = 15 unless max
