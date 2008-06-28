@@ -22,5 +22,14 @@ The plugin makes a new liquid template tag 'feedreader':
    {% endfeedreader %}
    </ul>
 
+Other Liquid variables that may be available depending on what a feed item named 'link'
+may provide:
+
+link.title (same as description)
+link.summary (used if the feed provides a summary or excerpt)
+link.author_name
+link.author_email 
+link.author_href
+
 
 (C) Mark Guzman 2006-2007, under an MIT license.
